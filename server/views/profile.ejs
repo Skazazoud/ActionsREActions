@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AREA - Profile Page</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body {
+            padding-top: 80px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        </div>
+
+        <div class="row">
+
+            <!-- LOCAL INFORMATION -->
+            <div class="col-sm-12">
+                <div class="well">
+                    <h3><span class="fa fa-user"></span> Local</h3>
+
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %><br>
+                        <strong>phone number</strong>: <%= user.local.phone %>
+                    </p>
+
+                    <%if (user.timer.state) { %>                 
+                        <h3>Time service activated</h3>
+                        <% } else{ %>
+                        <a href="/auth/timer" class="btn btn-default btn-sm">Activate timer Service</a>
+                    <% } %>
+
+                    <%if (user.twilio.state) { %>                 
+                        <h3>SMS service activated</h3>
+                        <% } else{ %>
+                        <a href="/auth/twilio" class="btn btn-default btn-sm">Activate SMS Service</a>
+                    <% } %>
+                    <%if (user.twitter.connected) { %>                 
+                        <h3>Twitter account connected</h3>
+                        <% } else{ %>
+                        <a href="/auth/twitter" class="btn btn-default btn-sm">Login to twitter</a>
+                    <% } %>
+                    <%if (user.nodemailer.state) { %>                 
+                        <h3>Nodemailer activated</h3>
+                        <% } else{ %>
+                        <a href="/auth/nodemailer" class="btn btn-default btn-sm">Activate nodemailer</a>
+                    <% } %>
+                </div>
+                <a href="/services" class="btn btn-default btn-sm">Accéder aux services</a>
+                <a href="/actions" class="btn btn-default btn-sm">Actions</a>
+                <div class="well">
+                    <h3><span class="fa fa-user"></span> Deactivate services or accounts</h3>
+                    <%if (!user.timer.state) { %>                 
+                        <% } else{ %>
+                        <a href="/unlink/timer" class="btn btn-default btn-sm">Deactivate timer Service</a>
+                    <% } %>
+                    <%if (!user.twilio.state) { %>                 
+                        <% } else{ %>
+                        <a href="/unlink/twilio" class="btn btn-default btn-sm">Deactivate SMS Service</a>
+                    <% } %>
+                    <%if (!user.twitter.connected) { %>                 
+                        <% } else{ %>
+                        <a href="/unlink/twitter" class="btn btn-default btn-sm">Unlink twitter account</a>
+                    <% } %>
+                    <%if (!user.nodemailer.state) { %>                 
+                        <% } else{ %>
+                        <a href="/unlink/nodemailer" class="btn btn-default btn-sm">Deactivate Nodemailer</a>
+                    <% } %>
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

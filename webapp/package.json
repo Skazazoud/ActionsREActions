@@ -1,0 +1,22 @@
+{
+	"name": "DEV_area_2018",
+	"main": "app.js",
+	"scripts": {
+		"start": "node ./app.js"
+	},
+	"dependencies": {
+		"bcrypt-nodejs": "latest",
+		"body-parser": "~1.18.3",
+		"connect-flash": "~0.1.1",
+		"cookie-parser": "~1.4.3",
+		"ejs": "~2.6.1",
+		"express": "~4.16.4",
+		"express-session": "~1.15.6",
+		"fs": "0.0.1-security",
+		"http-errors": "^1.6.3",
+		"jsonwebtoken": "~8.5.0",
+		"method-override": "~3.0.0",
+		"morgan": "~1.9.1",
+		"request": "^2.88.0"
+	}
+}

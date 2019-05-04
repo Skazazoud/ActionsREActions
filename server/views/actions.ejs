@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AREA - Services Page</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <style>
+        body {
+            padding-top: 80px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h1><span class="fa fa-anchor"></span> Actions Page</h1>
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        </div>
+        <div class="col-sm-12">
+            <div class="well">
+                <center>
+                <h3>List of actions</h3>
+                <form method="post" name="ratings">
+                    Send an SMS reminder to feed the cats
+                    <br>
+                    <input type="submit" name="action" value="cat2SMS">
+                    <br>
+                    Send an SMS reminder to call mum
+                    <br>
+                    <input type="submit" name="action" value="mum2SMS">
+                    <br>
+                    Send an SMS reminder to wake me up
+                    <br>
+                    <input type="submit" name="action" value="wake2SMS">
+                    <br>
+                    Send an SMS reminder I got a new twitter follower
+                    <br>
+                    <input type="submit" name="action" value="follow2SMS">
+                    <br>
+                    Send an SMS reminder I got a new twitter private message
+                    <br>
+                    <input type="submit" name="action" value="msg2SMS">
+                    <br>
+                    Send an E-Mail reminder I got a new twitter private message
+                    <br>
+                    <input type="submit" name="action" value="msg2Mail">
+                    <br>
+                    Send an E-Mail reminder I got a new twitter follower
+                    <br>
+                    <input type="submit" name="action" value="follow2Mail">
+                    <br>
+                    Send an E-Mail reminder I got a new twitter mention
+                    <br>
+                    <input type="submit" name="action" value="tweet2Mail">
+                </center>
+                </form>
+            </div>
+        </div>
+        <a href="/profile" class="btn btn-default btn-sm">Retourner sur mon profil</a>
+    </div>
+</body>

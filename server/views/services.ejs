@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AREA - Services Page</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <style>
+        body {
+            padding-top: 80px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h1><span class="fa fa-anchor"></span> Services Page</h1>
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        </div>
+        <div class="col-sm-12">
+            <div class="well">
+                <h3>List of services</h3>
+                <!--
+                    NOUVELLES ACTIONS RÉACTIONS NON FONCTIONELLES POUR LE MOMENT
+                    NOM A LA SUITE DE /SERVICES/ CHOISI A LA ZEUB
+                    A DEFINIR ENSEMBLE
+                -->
+                <div class="pretty p-bigger p-switch p-fill">
+                    <input type="checkbox" onclick="window.location.replace('/services/tweet2Mail');" <%= tweet2MailState %>/>
+                    <div class="state">
+                            <label>Send an email when you get a new Twitter follower</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="pretty p-bigger p-switch p-fill">
+                    <input type="checkbox" onclick="window.location.replace('/services/msg2Mail');" <%= msg2MailState %>/>
+                    <div class="state">
+                            <label>Send an email when you get a new Twitter private message</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="pretty p-bigger p-switch p-fill">
+                    <input type="checkbox" onclick="window.location.replace('/services/follow2Mail');" <%= follow2MailState %>/>
+                    <div class="state">
+                            <label>Send an email when someone mentions you on Twitter</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="pretty p-bigger p-switch p-fill">
+                    <input type="checkbox" onclick="window.location.replace('/services/wake2SMS');" <%= wake2SMSState %>/>
+                    <div class="state">
+                            <label>Send an SMS to wake up a 9AM</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="pretty p-bigger p-switch p-fill">
+                    <input type="checkbox" onclick="window.location.replace('/services/mum2SMS');" <%= mum2SMSState %>/>
+                    <div class="state">
+                            <label>Send an SMS to call mum at 6PM</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="pretty p-bigger p-switch p-fill">
+                    <input type="checkbox" onclick="window.location.replace('/services/cat2SMS');" <%= cat2SMSState %>/>
+                    <div class="state">
+                            <label>Send an SMS to feed the cat at 8PM</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="pretty p-bigger p-switch p-fill">
+                    <input type="checkbox" onclick="window.location.replace('/services/follow2SMS');" <%= follow2SMSState %>/>
+                    <div class="state">
+                            <label>Send an SMS when you get a new Twitter follower</label>
+                        </div>
+                    </a>
+                </div>
+                <div class="pretty p-bigger p-switch p-fill">
+                    <input type="checkbox" onclick="window.location.replace('/services/msg2SMS');" <%= msg2SMSState %>/>
+                    <div class="state">
+                            <label>Send an SMS when you get a new Twitter private message</label>
+                        </div>
+                    </a>
+                </div>
+
+               
+                
+                
+                <!--<form action="" method="post">
+                    <button name="Activer le rappel 'Chats'" value="chats">Activer/désactiver le rappel chats</button>
+                </form>
+                <form action="" method="post">
+                    <button name="Activer le rappel 'Maman'" value="mum">Activer/désactiver le rappel Maman</button>
+                </form>
+                <form action="" method="post">
+                    <button name="Activer le rappel 'Réveil'" value="wake">Activer/désactiver le rappel Reveil</button>
+                </form>-->
+                
+                
+            </div>
+        </div>
+        <a href="/profile" class="btn btn-default btn-sm">Retourner sur mon profil</a>
+    </div>
+</body>

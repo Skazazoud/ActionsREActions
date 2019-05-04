@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AREA - Services Page</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <style>
+        body {
+            padding-top: 80px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h1><span class="fa fa-anchor"></span> Services Page</h1>
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        </div>
+        <div class="col-sm-12">
+            <div class="well">
+                <h3>List of services</h3>
+                <div class="pretty p-bigger p-switch p-fill">
+                    <% if (twitter2Linkedin = true) { %>    
+                    <input type="checkbox" onclick="" <%= 'checked' %>/>
+                    <% } %>    
+                    <div class="state">
+                            <label>Automatic Tweet sharing on LinkedIn</label>
+                        </div>
+                    </a>
+                </div>
+                
+                <form action="" method="post">
+                    <button name="Activer le rappel 'Chats'" value="chats">Activer/désactiver le rappel chats</button>
+                </form>
+                <form action="" method="post">
+                    <button name="Activer le rappel 'Maman'" value="mum">Activer/désactiver le rappel Maman</button>
+                </form>
+                <form action="" method="post">
+                    <button name="Activer le rappel 'Réveil'" value="wake">Activer/désactiver le rappel Reveil</button>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</body>

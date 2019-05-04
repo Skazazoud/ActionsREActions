@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AREA - Profile Page</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body {
+            padding-top: 80px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        </div>
+
+        <div class="row">
+
+            <!-- LOCAL INFORMATION -->
+            <div class="col-sm-12">
+                <div class="well">
+                    <h3><span class="fa fa-user"></span> Local</h3>
+
+
+                	<a href="/auth/spotify" class="btn btn-default btn-sm">Login to spotify</a>
+                    <a href="/auth/twitter" class="btn btn-default btn-sm">Login to twitter</a>
+                    <a href="/auth/yammer" class="btn btn-default btn-sm">Login to yammer</a>
+                    <a href="/auth/linkedin" class="btn btn-default btn-sm">Login with LinkedIn</a>
+                    <a href="/auth/azureadoauth2" class="btn btn-default btn-sm">Login with Office365</a>
+                    <a href="/twilio" class="btn btn-default btn-sm">Activate Twilio service</a>
+                    <form action="" method="post">
+                        <button name="Activer le service de temps" value="send">Activer/désactiver le service de temps</button>
+                    </form>
+                </div>
+                <a href="/services" class="btn btn-default btn-sm">Accéder aux services</a>
+                <div class="well">
+                    <h3><span class="fa fa-user"></span> Unlink social media accounts</h3>
+
+                    <a href="/unlink/spotify" class="btn btn-default btn-sm">Unlink Spotify</a>
+                    <a href="/unlink/twitter" class="btn btn-default btn-sm">Unlink Twitter</a>
+                    <a href="/unlink/yammer" class="btn btn-default btn-sm">Unlink Yammer</a>
+                    <a href="/unlink/linkedin" class="btn btn-default btn-sm">Unlink Linkedin</a>
+                    <a href="unlink/azureadoauth2" class="btn btn-default btn-sm">Unlink Office365</a>
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
