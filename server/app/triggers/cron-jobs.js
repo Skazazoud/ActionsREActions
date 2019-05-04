@@ -7,10 +7,10 @@ const cron = require('node-cron');
     mail = require('nodemailer');
     Twit = require('twit'); 
     var T = new Twit({
-      consumer_key:         'BalQXpEwZ3hNcZiCCkJ7LBm9c',
-      consumer_secret:      'bsXBPBZ29X8Zcdk4rtt6J3Jg7tHBCRbtcksXhLSuv70Fp5VxW2',
-      access_token:         '1113094154643533824-V0HS0zVeEhaThAUE2vmau4TuKdkeQC',
-      access_token_secret:  'bHO4zR5tLGQ8lsNmMmtfbnTtW9ZL5hiM8eIAMxfmZGmFD',
+      consumer_key:         '',
+      consumer_secret:      '',
+      access_token:         '',
+      access_token_secret:  '',
       timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
       strictSSL:            true,     // optional - requires SSL certificates to be valid.
     })
@@ -19,14 +19,14 @@ const cron = require('node-cron');
         let transporter = mail.createTransport({
             service: 'gmail',
             auth: {
-                user: 'area.epitech.test@gmail.com',
+                user: '',
                 pass: '123456789bite'
             }
         });
       
         const mailOptions = {
-            from: 'area.epitech.test@gmail.com', // sender address
-            to: 'matthieu.andre@epitech.eu', // list of receivers
+            from: '', // sender address
+            to: '', // list of receivers
             subject: title, // Subject line
             html: content// plain text body
           };
@@ -58,7 +58,7 @@ const cron = require('node-cron');
         });
     }
     async function GET_TWEET() {
-        T.get('followers/ids', { screen_name: 'Skaazed' },  function (err, data, response) {
+        T.get('followers/ids', { screen_name: '' },  function (err, data, response) {
             return (data)
           })
     }
@@ -76,7 +76,7 @@ module.exports = {
             twitterHooks.subscribe({
                 userId: user.twitter.id,
                 accessToken: user.twitter.token,
-                accessTokenSecret: 'iy98hcbh489n38984y4h498'
+                accessTokenSecret: ''
             }).then(function (userActivity) {
                 userActivity
                 .on('tweet_create', (data) => twitterTriggers.tweet_trigger(user, data))
@@ -97,7 +97,7 @@ module.exports = {
                           .create({
                                 body: 'Wake up Neo',
                                 from: '+33644602808',
-                                to: '+33666843481'
+                                to: '+'
                           })
                       .then(message => console.log(message.sid));
                 var content = "<p>Wake up Neo<p>";
@@ -109,7 +109,7 @@ module.exports = {
                           .create({
                                body: 'Feed the bloody animals you fool',
                                from: '+33644602808',
-                               to: '+33666843481'
+                               to: '+'
                            })
                        .then(message => console.log(message.sid));
                 var content = "<p>Cat cat cat cat cat cat cat<p>";
@@ -121,7 +121,7 @@ module.exports = {
                            .create({
                                 body: 'Call ur mum idiot',
                                 from: '+33644602808',
-                                to: '+33666843481'
+                                to: '+'
                              })
                         .then(message => console.log(message.sid));
                 var content = "<p>Your mother is worrying about you u better give her a call<p>";

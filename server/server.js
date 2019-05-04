@@ -58,10 +58,10 @@ require('./app/routes.js')(app, passport, date); // load our routes and pass in 
 const twitterHooks = twitterWebhooks.userActivity({
     serverUrl: 'https://filius.serveo.net',
     route: '/webhooks/twitter', //default : '/'
-    consumerKey: 'BalQXpEwZ3hNcZiCCkJ7LBm9c',
-    consumerSecret: 'bsXBPBZ29X8Zcdk4rtt6J3Jg7tHBCRbtcksXhLSuv70Fp5VxW2',
-    accessToken: '1113094154643533824-V0HS0zVeEhaThAUE2vmau4TuKdkeQC',
-    accessTokenSecret: 'bHO4zR5tLGQ8lsNmMmtfbnTtW9ZL5hiM8eIAMxfmZGmFD',
+    consumerKey: '',
+    consumerSecret: '',
+    accessToken: '',
+    accessTokenSecret: '',
     environment: 'prod',
     app
 });

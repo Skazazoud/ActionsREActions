@@ -3,14 +3,14 @@ const User = require('../models/user.js');
     request = require('request');
     mail = require('nodemailer');
     twilio = require('twilio');
-    accountSid = 'ACa2611f66e0cc9c706012caee07c0bb9d';
-    authToken = 'b3d39209f66bfa6db93ff0a53f1d489d';
+    accountSid = '';
+    authToken = '';
     client = new twilio(accountSid, authToken); 
 
 let transporter = mail.createTransport({
     service: 'gmail',
     auth: {
-        user: 'area.epitech.test@gmail.com',
+        user: '',
         pass: '123456789bite'
     }
 });

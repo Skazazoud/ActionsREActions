@@ -28,8 +28,8 @@ module.exports = function(app, passport, date) {
     const   twilio = require('twilio');
             date = require('date-and-time');
 
-    const accountSid = 'ACa2611f66e0cc9c706012caee07c0bb9d'; // Your Account SID from www.twilio.com/console
-        authToken = 'b3d39209f66bfa6db93ff0a53f1d489d'; // Your Auth Token from www.twilio.com/console
+    const accountSid = '*****'; // Your Account SID from www.twilio.com/console
+        authToken = '******'; // Your Auth Token from www.twilio.com/console
         client = new twilio(accountSid, authToken);
 
     app.get('/about.json', function(req, res) {
@@ -365,7 +365,7 @@ module.exports = function(app, passport, date) {
     // =============================================================================
     // SERVER'S API ================================================================
     // =============================================================================
-    let token_secret = 'iy98hcbh489n38984y4h498';
+    let token_secret = '******';
 
     app.get('/api/home', (req, res) => {
         res.send('Welcome to the Home of our APP');
@@ -434,7 +434,7 @@ module.exports = function(app, passport, date) {
     // WEBHOOKS ====================================================================
     // =============================================================================
     app.get('/webhooks/twitter', (req, res) => {
-        response_token = "sha256=" + crypto.createHmac('sha256', "bsXBPBZ29X8Zcdk4rtt6J3Jg7tHBCRbtcksXhLSuv70Fp5VxW2").update(req.query.crc_token).digest('base64');
+        response_token = "sha256=" + crypto.createHmac('sha256', "*****").update(req.query.crc_token).digest('base64');
         console.log("response token: " + response_token);
         res.status(200).json({"response_token": response_token});
     });
@@ -455,13 +455,13 @@ async function EMAIL(subject, content, email){
     let transporter = mail.createTransport({
         service: 'gmail',
         auth: {
-            user: 'area.epitech.test@gmail.com',
+            user: '***********',
             pass: '123456789bite'
         }
     });
   
     const mailOptions = {
-        from: 'area.epitech.test@gmail.com', // sender address
+        from: '*******', // sender address
         to: email, // list of receivers
         subject: subject, // Subject line
         html: content// plain text body
