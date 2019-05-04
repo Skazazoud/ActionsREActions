@@ -129,8 +129,8 @@ module.exports = function(passport) {
         }));
     passport.use(
         new TwitterStrategy({
-                consumerKey: "BalQXpEwZ3hNcZiCCkJ7LBm9c",
-                consumerSecret: "bsXBPBZ29X8Zcdk4rtt6J3Jg7tHBCRbtcksXhLSuv70Fp5VxW2",
+                consumerKey: "",
+                consumerSecret: "",
                 callbackURL: "http://localhost:8080/auth/twitter/callback",
                 passReqToCallback: true
             },
